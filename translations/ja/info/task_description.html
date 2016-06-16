@@ -1,5 +1,5 @@
-﻿<img class="for_info_only" title="slice" src="{{MEDIA}}slice.png" alt="slice"
-     style="width: 300px;float: right; margin-top: 30px; "/>
+﻿<img class="for_info_only half" title="slice" src="{{MEDIA}}slice.png" alt="slice"
+     style="float: left; "/>
 
 
 <p>
@@ -12,19 +12,6 @@
 	空の配列については、結果は常に0(ゼロ)になるでしょう。
 </p>
 
-
-<p>
-    <strong>ヒント: </strong> このタスクは以下を使って解くことができます。
-    {% if "python 2" in interpreter|lower %}
-    <a href="http://docs.python.jp/2/tutorial/introduction.html#lists">リスト インデックス</a>,
-    <a href="http://docs.python.jp/2/tutorial/introduction.html#strings">スライス</a>,
-    <a href="http://docs.python.jp/2/library/functions.html#sum"> 組み込み関数 "sum"</a>。
-    {% else %}
-    <a href="http://docs.python.jp/3/tutorial/introduction.html#lists">リスト インデックス</a>,
-    <a href="http://docs.python.jp/3/tutorial/introduction.html#strings">スライス</a>,
-    <a href="http://docs.python.jp/3/library/functions.html#sum"> 組み込み関数 "sum"</a>。
-    {% endif %}
-</p>
 
 <p>
     <strong>入力: </strong> 整数のリスト
@@ -61,10 +48,3 @@ checkio([]) == 0
     all(-100 &lt; x &lt; 100 for x in array)<br>
 </p>
 
-
-<div class="facts for_info_only">
-    <p>
-		CheckiOはミッションを解くだけではありません。経験を交換します。
-		パズルを解いて、仲間のプレイヤーの解答をチェックし、独自の解答を公表し、仲間が公表した解答にフィードバックを与えます。
-    </p>
-</div>

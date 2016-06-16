@@ -1,24 +1,11 @@
-<img class="for_info_only" title="slice" src="{{MEDIA}}slice.png" alt="slice"
-     style="width: 300px;float: right; margin-top: 30px; "/>
+<img class="for_info_only half" title="slice" src="{{MEDIA}}slice.png" alt="slice"
+     style="float: left; "/>
 
 
 <p>
     Задано масив цілих чисел. Потрібно знайти суму елементів з парними індексами 
     (0-й, 2-й, 4-й і т.д.), а потім перемножити цю суму і останній елемент вихідного 
     масиву. Не забудьте, що перший елемент масиву має індекс 0.
-</p>
-
-<p>
-    <strong>Зауваження: </strong> Ви легко розв’яжете це завдання за допомогою:
-    {% if "python 2" in interpreter|lower %}
-    <a href="http://docs.python.org/2/tutorial/introduction.html#lists">індексів масивів</a>,
-    <a href="http://docs.python.org/2/tutorial/introduction.html#strings">зрізів</a> і
-    <a href="http://docs.python.org/2/library/functions.html#sum">вбудованої функції  "sum"</a>.
-    {% else %}
-    <a href="http://docs.python.org/3/tutorial/introduction.html#lists">індексів масивів</a>,
-    <a href="http://docs.python.org/3/tutorial/introduction.html#strings">зрізів</a> і
-    <a href="http://docs.python.org/3/library/functions.html#sum">вбудованої функції  "sum"</a>.
-    {% endif %}
 </p>
 
 <p>
@@ -54,11 +41,3 @@ checkio([]) == 0
     all(isinstance(x, int) for x in array)<br>
     all(-100 &lt; x &lt; 100 for x in array)<br>
 </p>
-
-<div class="facts for_info_only">
-    <p>
-        CheckiO - це не тільки розв’язання задач, але й обмін досвідом. 
-        Розв’язуйте головоломки, перевіряйте розв’язки інших гравців, 
-        публікуйте свої, та отримуйте відгуки.
-    </p>
-</div>
