@@ -1,0 +1,82 @@
+<body data-author="bryukh">
+<div class="question-answer">
+    <div class="question">
+        Ich habe keine Ahnung wo ich mit der Lösung anfangen soll.
+    </div>
+    <div class="answer">
+        Für diese Aufgabe solltest Du wissen wie man
+        <a href="http://docs.python.org/2/tutorial/introduction.html#lists">Listen Indizes</a> benutzt.
+        Das i-te Element einer Liste erhältst du mit array[i].
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Ich brauche etwas Hilfe um weiter zu kommen.
+    </div>
+    <div class="answer">
+        Um durch die Indizes zu iterieren kannst du "range" und "len" benutzen
+        <pre class="brush: python">
+for i in range(len(array)):
+    if not i % 2:
+        something
+</pre>
+        oder du kannst nur durch die geraden Indizes iterieren:
+<pre class="brush: python">
+for i in range(0, len(array), 2):
+    something
+</pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Ich hab's fast. Bitte hilf mir!
+    </div>
+    <div class="answer">
+        Um das letzte Element eines Array zu erhalten, benutze einfach einen negativen Index.
+        -1 gibt immer das letzte Element zurück.
+        Vergiss nicht gleich am Anfang zu prüfen ob der Array eventuell leer ist, sonst erhälst du vielleicht einen
+        "IndexError".
+<pre class="brush: python">
+if len(array) > 0:
+    blabla
+
+besser noch:
+
+if array:
+    blabla
+</pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Ich hänge fest. Gib mir einen kleinen Tip.
+    </div>
+    <div class="answer">
+        Mit
+        <a href="http://docs.python.org/2/tutorial/introduction.html#strings">Abschnitten</a> und
+        <a href="http://docs.python.org/2/library/functions.html#sum">der built-in Funktion "sum"</a> kannst Du diese
+        Aufgabe lösen.
+        Abschnitte bestehen aus drei Angaben - "from", "to" und "step". Wenn du hirfür keine Werte angibst, werden die
+        Standardwerte genutzt.<br>
+        Um also alle geraden Indizes zu erhalten nutze: array[::2], das ist eine kürzere Variante als:
+        array[0:len(array):2]
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Ich habe alles versucht. Nichts geht mehr. SOS!!!
+    </div>
+    <div class="answer">
+        If you don't want to use slices and sum, just accumulate the sum in a variable.
+<pre class="brush: python">
+def checkio(array):
+    result = 0
+    for i in range(0, len(array), 2):
+        result += array[i]  # result = result + array[i]
+    </pre>
+
+    </div>
+</div>
+
+
+</body>
