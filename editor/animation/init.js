@@ -5,6 +5,10 @@ requirejs(['ext_editor_io', 'jquery_190'],
         var $tryit;
 
         var io = new extIO({
+            functions: {
+                js: 'evenLast',
+                python: 'checkio'
+            },
             animation: function($expl, data){
                 if (!data.ext) {
                     return;
