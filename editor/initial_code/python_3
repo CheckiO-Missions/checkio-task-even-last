@@ -1,4 +1,4 @@
-def checkio(array):
+def checkio(array: list) -> int:
     """
         sums even-indexes elements and multiply at the last
     """
