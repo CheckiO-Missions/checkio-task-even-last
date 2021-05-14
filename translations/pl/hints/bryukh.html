@@ -1,0 +1,80 @@
+<body data-author="bryukh">
+<div class="question-answer">
+    <div class="question">
+        Nie wiem od czego zacząć.
+    </div>
+    <div class="answer">
+        Powinieneś umieć używać 
+        <a href="http://docs.python.org/2/tutorial/introduction.html#lists">indeksów listy </a>
+        aby rozwiązać tę misję.
+        Użyj zapisu array[i] aby otrzymać i-ty element tablicy.
+
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Nadal potrzebuję pomocy.
+    </div>
+    <div class="answer">
+        Aby iterować po indeksach możesz użyć "range" i "len".
+        <pre class="brush: python">
+for i in range(len(array)):
+    if not i % 2:
+        something
+</pre>
+lub możesz iterować wyłącznie po parzystych indeksch używając range:
+<pre class="brush: python">
+for i in range(0, len(array), 2):
+    something
+</pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Jestem w połowie drogi. Pomocy!
+    </div>
+    <div class="answer">
+        Aby dostać się do ostatniego elementu tablicy, użyj ujemnego indeksu -- array[-1].
+        Nie zapomnij o pustej tablicy - w przeciwnym wypadku dostaniesz IndexError,
+        więc sprawdź to przed uruchomieniem.
+<pre class="brush: python">
+if len(array) > 0:
+    blabla
+
+OR IN PYTHONIC
+
+if array:
+    blabla
+</pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Utknąłem. Potrzebuję małej podpowiedzi.
+    </div>
+    <div class="answer">
+        Możesz rozwiązać tą misję używając
+        <a href="http://docs.python.org/2/tutorial/introduction.html#strings">slices</a> and
+        <a href="http://docs.python.org/2/library/functions.html#sum">wbudowanej funkcji "sum"</a>.
+        Slices używajć trzech liczb - "from", "to" oraz "step". Jeśli nie zdefiniujesz żadnej z nich, zostaną użyte wartości domyślne.
+        Aby uzyskać wszystkie elementy na parzystych pozycjach użyj array[::2] - jest to skrócona forma zapisu array[0:len(array):2].
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Próbowałem już wszystkiego. Nic nie działa. SOS.
+    </div>
+    <div class="answer">
+        Jeśli nie chcesz używać "slices" i "sum", możesz zsumować liczby za pomocą dodatkowej zmiennej.
+<pre class="brush: python">
+def checkio(array):
+    result = 0
+    for i in range(0, len(array), 2):
+        result += array[i]  # result = result + array[i]
+    </pre>
+
+    </div>
+</div>
+
+
+</body>
