@@ -24,17 +24,7 @@
     <p>
         <strong>Przykład:</strong>
     </p>
-    <pre class="brush: python">{% if interpreter.slug == "js-node" %}
-evenLast([0, 1, 2, 3, 4, 5]) == 30
-evenLast([1, 3, 5]) == 30
-evenLast([6]) == 36
-evenLast([]) == 0
-{% else %}
-checkio([0, 1, 2, 3, 4, 5]) == 30
-checkio([1, 3, 5]) == 30
-checkio([6]) == 36
-checkio([]) == 0
-{% endif %}</pre>
+    <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 </div>
 
 <p class="for_info_only">
