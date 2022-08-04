@@ -14,13 +14,17 @@
         What instruments of Python should I use to implement this idea into code?
     </div>
     <div class="answer">
-        I call this step of hints "Google the following terms".
-        First of all, you need 'if-else' construction to return number or 0,
-        depending on the emptiness of list. Check emptiness of list with 'len()' method of list - 
-        result is not equel to 0. Then, multiply 'sum()' by the last value in list.
-        It has index 'len()' of list - 1. Inside sum() create new list using 'list comprehentions':
-        iterate over the given array using 'range()' with step 2 to get only even indexes and take values
-        of list with these indexes.
+        First of all, you need <a target="_blank" href="https://docs.python.org/3/tutorial/controlflow.html#if-statements">
+            if-else</a> statement to return number or 0,
+        depending on the emptiness of list. Check emptiness of list with <a target="_blank"
+        href="https://docs.python.org/3/library/functions.html?highlight=len#len">len()</a> of list - 
+        result is not equel to 0. Then, multiply <a target="_blank"
+        href="https://docs.python.org/3/library/functions.html?highlight=sum#sum">sum()</a> by the last value in list.
+        It has index 'len()' of list - 1. Inside sum() create new list using <a target="_blank"
+        href="https://www.w3schools.com/python/python_lists_comprehension.asp">list comprehentions</a>:
+        iterate over the given array using <a target="_blank"
+        href="https://docs.python.org/3/library/functions.html#func-range">range()</a> with step 2 to get only
+        even indexes and take values of list with these indexes.
     </div>
 </div>
 <div class="question-answer">
@@ -39,9 +43,9 @@ def checkio(array: list[int]) -> int:
     else:
         return 0
         </pre>
-        To make the code more 'pythonic' (I advise you to google this term as well)
-        use 'try-except' to catch IndexError, 'slice' instead of list
-        comprehentions and 'negative indexes of list':
+        To make the code more 'pythonic' and shorter (I advise you to google this term as well)
+        use  <a target="_blank" href="https://docs.python.org/3/tutorial/errors.html#handling-exceptions">try-except</a> to catch IndexError, slicing instead of list
+        comprehentions and negative indexes of list:
         <pre class="brush: python">
 def checkio(array: list[int]) -> int:
             

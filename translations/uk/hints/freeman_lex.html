@@ -14,13 +14,17 @@
         Які інструменти Python мені слід використати для втілення цієї ідеї у код?
     </div>
     <div class="answer">
-        Цей крок у підказках я називаю "Загугли наступні терміни".
-        Перш за все, тобі потрібен оператор умови 'if-else', щоб повертати певне число чи 0, залежно
-        від того, чи порожній список. Це перевіряється наступним чином: результат методу списку 'len()'
+        Перш за все, тобі потрібен оператор умови <a target="_blank" href="https://docs.python.org/3/tutorial/controlflow.html#if-statements">
+            if-else</a>, щоб повертати певне число чи 0, залежно
+        від того, чи порожній список. Це перевіряється наступним чином: результат <a target="_blank"
+        href="https://docs.python.org/3/library/functions.html?highlight=len#len">len()</a>
         порівнюється із 0.
-        Потім, помнож 'sum()' на  останнє значення в списку. Воно має індекс 'len()' списку - 1.
-        Всередині 'sum()' створи новий список, використовуючи спискові вирази 'list comprehentions':
-        проходь наданий список із допомогою 'range()' з кроком 2, щоб отримати лише парні індекси,
+        Потім, помнож <a target="_blank"
+        href="https://docs.python.org/3/library/functions.html?highlight=sum#sum">sum()</a> на останнє значення в списку. Воно має індекс len() списку - 1.
+        Всередині sum() створи новий список, використовуючи <a target="_blank"
+        href="https://www.w3schools.com/python/python_lists_comprehension.asp">спискові вирази</a>:
+        проходь наданий список із допомогою <a target="_blank"
+        href="https://docs.python.org/3/library/functions.html#func-range">range()</a> з кроком 2, щоб отримати лише парні індекси,
         і включай в новий список значення із цими індексами.
     </div>
 </div>
@@ -40,9 +44,9 @@ def checkio(array: list[int]) -> int:
     else:
         return 0
         </pre>
-        Щоб зробити код більш 'pythonic' (Я раджу тобі загуглити і цей термін)
-        використай 'try-except' оператор, щоб "зловити" помилку IndexError,
-        'slice' замість спискових виразів і 'негативні індекси списку':
+        Щоб зробити код коротшим і більш 'pythonic' (Я раджу тобі загуглити і цей термін)
+        використай <a target="_blank" href="https://docs.python.org/3/tutorial/errors.html#handling-exceptions">try-except</a> оператор, щоб "зловити" помилку IndexError,
+        'зріз' списку замість спискових виразів і негативні індекси списку:
         <pre class="brush: python">
 def checkio(array: list[int]) -> int:
             
