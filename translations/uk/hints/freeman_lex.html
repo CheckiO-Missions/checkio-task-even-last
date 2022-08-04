@@ -1,0 +1,70 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        Я не маю уявлення, як розвязати це завдання.
+    </div>
+    <div class="answer">
+        Що ж, ідея у тому, щоб перебрати значення списку і просумувати ті, які мають парні індекси.
+        Потім помножити цю суму на останнє значення в списку і повернути остаточний результат.
+        Але не забудь, якщо список порожній, то функція має повертати 0.
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Які інструменти Python мені слід використати для втілення цієї ідеї у код?
+    </div>
+    <div class="answer">
+        Перш за все, тобі потрібен оператор умови <a target="_blank" href="https://docs.python.org/3/tutorial/controlflow.html#if-statements">
+            if-else</a>, щоб повертати певне число чи 0, залежно
+        від того, чи порожній список. Це перевіряється наступним чином: результат <a target="_blank"
+        href="https://docs.python.org/3/library/functions.html?highlight=len#len">len()</a>
+        порівнюється із 0.
+        Потім, помнож <a target="_blank"
+        href="https://docs.python.org/3/library/functions.html?highlight=sum#sum">sum()</a> на останнє значення в списку. Воно має індекс len() списку - 1.
+        Всередині sum() створи новий список, використовуючи <a target="_blank"
+        href="https://www.w3schools.com/python/python_lists_comprehension.asp">спискові вирази</a>:
+        проходь наданий список із допомогою <a target="_blank"
+        href="https://docs.python.org/3/library/functions.html#func-range">range()</a> з кроком 2, щоб отримати лише парні індекси,
+        і включай в новий список значення із цими індексами.
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Я вцілому розумію, але мені потрібно побачити розв'язок!
+    </div>
+    <div class="answer">
+        Ось він:
+        <pre class="brush: python">
+def checkio(array: list[int]) -> int:
+
+    if len(array) != 0:
+        sumEven = sum([array[i] for i in range(0, len(array), 2)])
+        last = array[len(array) - 1]
+        return sumEven * last 
+    else:
+        return 0
+        </pre>
+        Щоб зробити код коротшим і більш 'pythonic' (Я раджу тобі загуглити і цей термін)
+        використай <a target="_blank" href="https://docs.python.org/3/tutorial/errors.html#handling-exceptions">try-except</a> оператор, щоб "зловити" помилку IndexError,
+        'зріз' списку замість спискових виразів і негативні індекси списку:
+        <pre class="brush: python">
+def checkio(array: list[int]) -> int:
+            
+    try:
+        return array[-1] * sum(array[::2]) 
+    except IndexError:
+        return 0
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Дякую! Тепер я знаю і розумію більше! Все працює як слід!
+    </div>
+    <div class="answer">
+        Радий це чути!
+    </div>
+</div>
+
+
+</body>
