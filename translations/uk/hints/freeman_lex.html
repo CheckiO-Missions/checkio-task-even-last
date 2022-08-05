@@ -22,7 +22,7 @@
         Потім, помнож <a target="_blank"
         href="https://docs.python.org/3/library/functions.html?highlight=sum#sum">sum()</a> на останнє значення в списку. Воно має індекс len() списку - 1.
         Всередині sum() створи новий список, використовуючи <a target="_blank"
-        href="https://www.w3schools.com/python/python_lists_comprehension.asp">спискові вирази</a>:
+        href="https://www.w3schools.com/python/python_lists_comprehension.asp">генератори списків</a>:
         проходь наданий список із допомогою <a target="_blank"
         href="https://docs.python.org/3/library/functions.html#func-range">range()</a> з кроком 2, щоб отримати лише парні індекси,
         і включай в новий список значення із цими індексами.
@@ -46,7 +46,7 @@ def checkio(array: list[int]) -> int:
         </pre>
         Щоб зробити код коротшим і більш 'pythonic' (Я раджу тобі загуглити і цей термін)
         використай <a target="_blank" href="https://docs.python.org/3/tutorial/errors.html#handling-exceptions">try-except</a> оператор, щоб "зловити" помилку IndexError,
-        'зріз' списку замість спискових виразів і негативні індекси списку:
+        'зріз' списку замість генератора списків і негативні індекси списку:
         <pre class="brush: python">
 def checkio(array: list[int]) -> int:
             
