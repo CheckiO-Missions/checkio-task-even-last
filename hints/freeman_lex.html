@@ -1,38 +1,38 @@
 <body data-author="freeman_lex">
 <div class="question-answer">
     <div class="question">
-        I have no idea how to start solving this mission.
+        <p>
+            I have no idea how to start solving this mission.
+        </p>
     </div>
     <div class="answer">
-        Well, first of all, you need to move over the list and sum numbers with even indexes.
-        Then multiply this sum and the last number in list, return the result.
-        Don't forget, if list is empty - return 0.
+        <p>
+            💡 Well, first of all, you need to move over the list and sum numbers with even indexes. Then multiply this sum and the last number in list, return the result. Don't forget, if list is empty - return 0.
+        </p>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        What instruments of Python should I use to implement this idea into code?
+        <p>
+            What instruments of Python should I use to implement this idea into code?
+        </p>
     </div>
     <div class="answer">
-        First of all, you need <a target="_blank" href="https://docs.python.org/3/tutorial/controlflow.html#if-statements">
-            if-else</a> statement to return number or 0,
-        depending on the emptiness of list. Check emptiness of list with <a target="_blank"
-        href="https://docs.python.org/3/library/functions.html?highlight=len#len">len()</a> of list - 
-        result is not equel to 0. Then, multiply <a target="_blank"
-        href="https://docs.python.org/3/library/functions.html?highlight=sum#sum">sum()</a> by the last value in list.
-        It has index 'len()' of list - 1. Inside sum() create new list using <a target="_blank"
-        href="https://www.w3schools.com/python/python_lists_comprehension.asp">list comprehentions</a>:
-        iterate over the given array using <a target="_blank"
-        href="https://docs.python.org/3/library/functions.html#func-range">range()</a> with step 2 to get only
-        even indexes and take values of list with these indexes.
+        <p>
+            First of all, you need <a target="_blank" href="https://docs.python.org/3/tutorial/controlflow.html#if-statements">if-else</a> statement to return number or 0, depending on the emptiness of list. Check emptiness of list with <a target="_blank" href="https://docs.python.org/3/library/functions.html?highlight=len#len">len()</a> of list - result is not equal to 0. Then, multiply <a target="_blank" href="https://docs.python.org/3/library/functions.html?highlight=sum#sum">sum()</a> by the last value in list. It has index <b class="code">len(list)-1</b>. Inside sum() create new list using <a target="_blank" href="https://www.w3schools.com/python/python_lists_comprehension.asp">list comprehensions</a>: iterate over the given array using <a target="_blank" href="https://docs.python.org/3/library/functions.html#func-range">range()</a> with step 2 to get only even indexes and take values of list with these indexes.
+        </p>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        I generally understand, but need to see the solution!
+        <p>
+            I generally understand, but need to see the solution!
+        </p>
     </div>
     <div class="answer">
-        Here it is:
+        <p>
+            Here it is:
+        </p>
         <pre class="brush: python">
 def checkio(array: list[int]) -> int:
 
@@ -43,9 +43,10 @@ def checkio(array: list[int]) -> int:
     else:
         return 0
         </pre>
-        To make the code more 'pythonic' and shorter (I advise you to google this term as well)
-        use  <a target="_blank" href="https://docs.python.org/3/tutorial/errors.html#handling-exceptions">try-except</a> to catch IndexError, slicing instead of list
-        comprehentions and negative indexes of list:
+        <p>
+            To make the code more 'pythonic' (I advise you to google this term as well) and shorter, use  <a target="_blank" href="https://docs.python.org/3/tutorial/errors.html#handling-exceptions">try-except</a> to catch IndexError, slicing instead of list comprehensions and negative indexes of list:
+        </p>
+        
         <pre class="brush: python">
 def checkio(array: list[int]) -> int:
             
@@ -58,12 +59,14 @@ def checkio(array: list[int]) -> int:
 </div>
 <div class="question-answer">
     <div class="question">
-        Thanks! Now I know and understand more! Everything works fine!
+        <p>
+            Thanks! Now I know and understand more! Everything works fine!
+        </p>
     </div>
     <div class="answer">
-        Glad to hear it!
+        <p>
+            👍 Glad to hear it!
+        </p>
     </div>
 </div>
-
-
 </body>
