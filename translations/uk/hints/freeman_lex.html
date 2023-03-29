@@ -33,6 +33,7 @@
         <p>
             Ось він:
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 def checkio(array: list[int]) -> int:
 
@@ -43,9 +44,11 @@ def checkio(array: list[int]) -> int:
     else:
         return 0
         </pre>
+        </div>
         <p>
             Щоб зробити код коротшим і більш 'pythonic' (Я раджу тобі загуглити і цей термін), використай <a target="_blank" href="https://docs.python.org/3/tutorial/errors.html#handling-exceptions">try-except</a> оператор, щоб "зловити" помилку IndexError, 'зріз' списку замість генератора списків і негативні індекси списку:
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 def checkio(array: list[int]) -> int:
             
@@ -54,6 +57,7 @@ def checkio(array: list[int]) -> int:
     except IndexError:
         return 0
         </pre>
+        </div>
     </div>
 </div>
 <div class="question-answer">
