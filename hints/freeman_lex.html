@@ -33,6 +33,7 @@
         <p>
             Here it is:
         </p>
+        <div class="spoiler">
         <pre class="brush: python">
 def checkio(array: list[int]) -> int:
 
@@ -43,10 +44,11 @@ def checkio(array: list[int]) -> int:
     else:
         return 0
         </pre>
+        </div>
         <p>
             To make the code more 'pythonic' (I advise you to google this term as well) and shorter, use  <a target="_blank" href="https://docs.python.org/3/tutorial/errors.html#handling-exceptions">try-except</a> to catch IndexError, slicing instead of list comprehensions and negative indexes of list:
         </p>
-        
+        <div class="spoiler">
         <pre class="brush: python">
 def checkio(array: list[int]) -> int:
             
@@ -55,6 +57,7 @@ def checkio(array: list[int]) -> int:
     except IndexError:
         return 0
         </pre>
+        </div>
     </div>
 </div>
 <div class="question-answer">
