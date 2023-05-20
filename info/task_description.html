@@ -3,38 +3,38 @@
 
 
 <p>
-    You are given an array of integers. You should find the sum of the integers with even indexes (0th, 2nd, 4th...). Then multiply this summed number and the final element of the array together. 
+    You are given an {% if is_js %}<span translate="repeat">array</span>{% else %}<span translate="repeat">list</span>{% endif %} of {% if is_js %}<span translate="repeat">numbers</span>{% else %}<span translate="repeat">integers</span>{% endif %}. You should find the sum of the elements with even indexes (0th, 2nd, 4th...). Then multiply this summed number and the final element of the {% if is_js %}<span translate="repeat">array</span>{% else %}<span translate="repeat">list</span>{% endif %} together. 
      Don't forget that the first element has an index of 0.
 </p>
 
 <p>
-    For an empty array, the result will always be 0 (zero).
+    For an empty {% if is_js %}<span translate="repeat">array</span>{% else %}<span translate="repeat">list</span>{% endif %}, the result will always be 0 (zero).
 </p>
 
 <p>
-    <strong>Input: </strong> A list of integers.
+    <strong>Input:</strong> {% if is_js %}<span translate="repeat">Array</span>{% else %}<span translate="repeat">List</span>{% endif %} of {% if is_js %}<span translate="repeat">numbers</span>{% else %}<span translate="repeat">integers</span>{% endif %}.
 </p>
 
 <p>
-    <strong>Output: </strong> The number as an integer.
+    <strong>Output:</strong> The number as an {% if is_js %}<span translate="repeat">number</span>{% else %}<span translate="repeat">integer</span>{% endif %}.
 </p>
 
 
 <div class="for_info_only">
     <p>
-        <strong>Example:</strong>
+        <strong>Examples:</strong>
     </p>
     <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 </div>
 
 <p class="for_info_only">
-    <strong>How it is used: </strong>
+    <strong>How it is used:</strong>
     Indexes and slices are important elements of coding. This will come in handy down the
     road!
 </p>
 
 <p>
-    <strong>Precondition: </strong>
+    <strong>Preconditions:</strong>
     0 &le; len(array) &le; 20<br>
     all(isinstance(x, int) for x in array)<br>
     all(-100 &lt; x &lt; 100 for x in array)<br>
