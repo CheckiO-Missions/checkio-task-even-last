@@ -1,44 +1,41 @@
 <img class="for_info_only half" title="slice" src="{{MEDIA}}slice.png" alt="slice"
      style="float: left; "/>
 
+
 <p>
-    On vous donne une liste d'entiers. Vous devez trouver la somme des &eacute;l&eacute;ments dont les indices sont pairs (0&egrave;me, 2&egrave;me, 4&egrave;me...)
-    et ensuite multiplier ce total par le dernier &eacute;l&eacute;ment de la liste.
-    N'oubliez pas que l'indice du premier &eacute;l&eacute;ment est 0.
+    On vous donne {% if is_js %}un <span>tableau</span> <span>(array)</span>{% else %} une <span>liste</span> <span>(list)</span>{% endif %} de {% if is_js %}<span>nombres</span> <span>(numbers)</span>{% else %}<span>entiers</span> <span>(integers)</span>{% endif %}. Vous devez trouver la somme des éléments ayant un indice pair (0e, 2e, 4e...). Multipliez ensuite ce nombre additionné et le dernier élément du<span>tableau</span> {% if is_js %}<span></span> <span>(array)</span><span> </span>{% else %} <span>liste</span> <span>(list)</span>{% endif %} ensemble. 
+     N'oubliez pas que le premier élément a un indice de 0.
 </p>
 
 <p>
-    Pour une liste vide, le r&eacute;sultat sera toujours 0 (z&eacute;ro).
+    Pour un<span>tableau</span> {% if is_js %}<span></span> vide <span>(array)</span>{% else %}<span>list</span>{% endif %} , le résultat sera toujours 0 (zéro).
 </p>
 
 <p>
-    <strong>Entr&eacute;e : </strong> Une liste (list) d'entiers (int).
+   <strong>Entrée:</strong> {% if is_js %}<span>Tableau</span> <span>(Array)</span>{% else %}<span>Liste</span> <span>(List)</span>{% endif %} de {% if is_js %}<span>nombres</span> <span>(numbers)</span>{% else %}<span>entiers</span> <span>(integers)</span>{% endif %}.
 </p>
 
 <p>
-    <strong>Sortie : </strong> Le résultat en tant qu'entier (int).
+   <strong>Sortie:</strong> Le nombre sous forme de {% if is_js %}<span>nombre</span> <span>(number)</span>{% else %} entier <span>(integer)</span>{% endif %}.
 </p>
 
 
 <div class="for_info_only">
     <p>
-        <strong>Exemple : </strong>
+        <strong>Exemples:</strong>
     </p>
     <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 </div>
 
 <p class="for_info_only">
-    <strong>&Agrave; quoi cela sert : </strong>
-    Les indices et les d&eacute;coupages sont d'importants &eacute;l&eacute;ments pour coder en Python et également dans d'autres langages.
-    Ils vont s'av&eacute;rer tr&egrave;s pratiques au fur et &agrave; mesure de votre avancée en programmation!
+   <strong>Comment l'utiliser:</strong>
+    Les index et les tranches sont des éléments importants du codage. Cela s'avérera utile à l'avenir!
+    pratique!
 </p>
-
 
 <p>
-    <strong>Pr&eacute;condition : </strong>
-    0 &le; len(liste) &le; 20<br>
-    all(isinstance(x, int) for x in liste)<br>
-    all(-100 &lt; x &lt; 100 for x in liste)<br>
-
+   <strong>Conditions préalables:</strong>
+    0 &le; len(array) &le; 20<br>
+    all(isinstance(x, int) for x in array)<br>
+    all(-100 &lt; x &lt; 100 for x in array)<br>
 </p>
-

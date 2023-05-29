@@ -1,0 +1,75 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Je n'ai aucune idée de la manière de commencer à résoudre cette mission.
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            💡 Eh bien, tout d'abord, vous devez vous déplacer sur la liste et additionner les nombres avec des indices pairs. Ensuite, multipliez cette somme et le dernier nombre de la liste, et renvoyez le résultat. N'oubliez pas que si la liste est vide, vous devez renvoyer 0.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Quels instruments de Python dois-je utiliser pour mettre en œuvre cette idée dans le code?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Tout d'abord, vous avez besoin de l'instruction <a target="_blank" href="https://docs.python.org/3/tutorial/controlflow.html#if-statements">if-else</a> pour retourner un nombre ou 0, en fonction du vide de la liste. Vérifiez la vacuité de la liste avec <a target="_blank" href="https://docs.python.org/3/library/functions.html?highlight=len#len">len()</a> de la liste - le résultat n'est pas égal à 0. Ensuite, multipliez <a target="_blank" href="https://docs.python.org/3/library/functions.html?highlight=sum#sum">sum()</a> par la dernière valeur de la liste. Elle a l'index <b class="code">len(list)-1</b>. Dans sum(), créez une nouvelle liste en utilisant <a target="_blank" href="https://www.w3schools.com/python/python_lists_comprehension.asp">list comprehensions</a>: itérez sur le tableau donné en utilisant <a target="_blank" href="https://docs.python.org/3/library/functions.html#func-range">range()</a> avec l'étape 2 pour obtenir uniquement les index pairs et prenez les valeurs de la liste avec ces index.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Je comprends globalement, mais j'ai besoin de voir la solution!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            La voici:
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def checkio(array: list[int]) -> int:
+
+    if len(array)!= 0:
+        sumEven = sum([array[i] for i in range(0, len(array), 2)])
+        last = array[len(array) - 1]
+        return sumEven * last 
+    else:
+        return 0
+        </pre>
+        </div>
+        <p>
+            Pour rendre le code plus 'pythonique' (je vous conseille de googler ce terme également) et plus court, utilisez <a target="_blank" href="https://docs.python.org/3/tutorial/errors.html#handling-exceptions">try-except</a> pour attraper IndexError, slicing au lieu des compréhensions de liste et des index négatifs de liste:
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def checkio(array: list[int]) -> int:
+            
+    try:
+        return array[-1] * sum(array[::2]) 
+    except IndexError:
+        return 0
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Merci! Maintenant je sais et je comprends mieux! Tout fonctionne bien!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            👍 Heureux de l'apprendre!
+        </p>
+    </div>
+</div>
+</body>
