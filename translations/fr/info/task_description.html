@@ -3,20 +3,20 @@
 
 
 <p>
-    On vous donne {% if is_js %}un <span>tableau</span> <span>(array)</span>{% else %} une <span>liste</span> <span>(list)</span>{% endif %} de {% if is_js %}<span>nombres</span> <span>(numbers)</span>{% else %}<span>entiers</span> <span>(integers)</span>{% endif %}. Vous devez trouver la somme des éléments ayant un indice pair (0e, 2e, 4e...). Multipliez ensuite ce nombre additionné et le dernier élément du<span>tableau</span> {% if is_js %}<span></span> <span>(array)</span><span> </span>{% else %} <span>liste</span> <span>(list)</span>{% endif %} ensemble. 
+    On vous donne {% if is_js %}un <span>tableau</span> <span>(array)</span>{% else %}une <span>liste</span> <span>(list)</span>{% endif %} de {% if is_js %}<span>nombres</span> <span>(numbers)</span>{% else %}<span>entiers</span> <span>(integers)</span>{% endif %}. Vous devez trouver la somme des éléments ayant un indice pair (0e, 2e, 4e...). Multipliez ensuite ce nombre additionné et le dernier élément du {% if is_js %}<span>tableau</span> <span>(array)</span>{% else %}<span>liste</span> <span>(list)</span>{% endif %} ensemble. 
      N'oubliez pas que le premier élément a un indice de 0.
 </p>
 
 <p>
-    Pour un<span>tableau</span> {% if is_js %}<span></span> vide <span>(array)</span>{% else %}<span>list</span>{% endif %} , le résultat sera toujours 0 (zéro).
+    Pour un {% if is_js %}<span>tableau</span> vide <span>(array)</span>{% else %}list{% endif %}, le résultat sera toujours 0 (zéro).
 </p>
 
 <p>
-   <strong>Entrée:</strong> {% if is_js %}<span>Tableau</span> <span>(Array)</span>{% else %}<span>Liste</span> <span>(List)</span>{% endif %} de {% if is_js %}<span>nombres</span> <span>(numbers)</span>{% else %}<span>entiers</span> <span>(integers)</span>{% endif %}.
+   <strong>Entrée:</strong> {% if is_js %}<span>Tableau</span> <span>(array)</span>{% else %}<span>Liste</span> <span>(list)</span>{% endif %} de {% if is_js %}<span>nombres</span> <span>(numbers)</span>{% else %}<span>entiers</span> <span>(integers)</span>{% endif %}.
 </p>
 
 <p>
-   <strong>Sortie:</strong> Le nombre sous forme de {% if is_js %}<span>nombre</span> <span>(number)</span>{% else %} entier <span>(integer)</span>{% endif %}.
+   <strong>Sortie:</strong> Le nombre sous forme de {% if is_js %}<span>nombre</span> <span>(number)</span>{% else %}entier <span>(integer)</span>{% endif %}.
 </p>
 
 
