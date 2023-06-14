@@ -3,38 +3,39 @@
 
 
 <p>
-    Na wejściu jest tablica liczb całkowitych. Znajdź sumę elementów o parzystych indeksach (zerowy, drugi, czwarty, ...)
-    i pomnóż ją przez ostatni elment tablicy. Nie zapomnij, że pierwszy element ma indeks 0.    
+    Otrzymują Państwo tablicę {% if is_js %}{% else %} listę{% endif %} <span>({% if is_js %}array{% else %}list{% endif %})</span> liczb całkowitych <span>{% if is_js %}(number){% else %}(int){% endif %}</span>. Proszę znaleźć sumę elementów o parzystych indeksach (0., 2., 4...). Następnie proszę pomnożyć razem tę zsumowaną liczbę i ostatni element tablicy {% if is_js %}{% else %} listy{% endif %} <span>({% if is_js %}array{% else %}list{% endif %})</span> razem. 
+     Proszę pamiętać, że pierwszy element ma indeks 0.
 </p>
 
 <p>
-    Dla pustej tablicy, wynik powinien być 0 (zero).
+    Dla pustej tablicy {% if is_js %}{% else %} listy{% endif %} <span>({% if is_js %}array{% else %}list{% endif %})</span>wynikiem zawsze będzie 0 (zero).
 </p>
 
 <p>
-    <strong>Wejście: </strong> Tablica liczb całkowitych.
+   <strong>Wejście:</strong> {% if is_js %}Tablica{% else %}Lista{% endif %} <span>({% if is_js %}Array{% else %}List{% endif %})</span> liczb całkowitych <span>{% if is_js %}(number){% else %}(int){% endif %}</span>.
 </p>
 
 <p>
-    <strong>Wyjście: </strong> Liczba całkowita.
+   <strong>Dane wyjściowe:</strong> Liczba całkowita <span>{% if is_js %}(number){% else %}(int){% endif %}</span>.
 </p>
 
 
 <div class="for_info_only">
     <p>
-        <strong>Przykład:</strong>
+        <strong>Przykłady:</strong>
     </p>
     <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 </div>
 
 <p class="for_info_only">
-    <strong>Korzyści: </strong>
-    Indeksy i wycinki są ważnymi elementami programowania w pythonie i innych językach. Przyda się później!
+   <strong>Jak jest używany:</strong>
+    Indeksy i plasterki są ważnymi elementami kodowania. Przyda się to w przyszłości
+    droga!
 </p>
 
 <p>
-    <strong>Założenia: </strong>
-    0 &le; len(tablica) &le; 20<br>
-    dla-każdego(isinstance(x, int) for x in tablica)<br>
-    dla-każdego(-100 &lt; x &lt; 100 for x in tablica)<br>
+   <strong>Warunki wstępne:</strong>
+    0 &le; len(array) &le; 20<br>
+    all(isinstance(x, int) for x in array)<br>
+    all(-100 &lt; x &lt; 100 for x in array)<br>
 </p>
