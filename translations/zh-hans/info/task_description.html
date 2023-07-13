@@ -3,36 +3,38 @@
 
 
 <p>
-    给你一个整数数组，需要你把具有偶数索引的元素相加（0，2，4 ...），然后把相加后得到的数与最后一个元素相乘。 不要忘记，第一个元素的索引是0。
+    给定{% if is_js %}数组{% else %}列表{% endif %} <span>({% if is_js %}array{% else %}list{% endif %})</span>的整数 <span>{% if is_js %}(number){% else %}(int){% endif %}</span>.您应该找出偶数索引元素（第 0 个，第 2 个，第 4 个......）的和。然后将这个和与{% if is_js %}数组{% else %}列表{% endif %} 的最后一个元素相乘。 <span>({% if is_js %}array{% else %}list{% endif %})</span>相乘。 
+     不要忘记第一个元素的索引为0。
 </p>
 
 <p>
-    如果传入的是一个空数组，则应该返回0。
+    对于一个空的{% if is_js %}数组{% else %}列表{% endif %} <span>({% if is_js %}array{% else %}list{% endif %})</span>的结果总是0（零）。
 </p>
 
 <p>
-    <strong>输入: </strong> 一个整数列表
+   <strong>输入：</strong> {% if is_js %}数组{% else %}列表{% endif %} <span>({% if is_js %}Array{% else %}List{% endif %})</span>的整数 <span>{% if is_js %}(number){% else %}(int){% endif %}</span>.
 </p>
 
 <p>
-    <strong>输出: </strong> 你得出的答案（整数值类型）
+   <strong>输出：</strong>一个整数 <span>{% if is_js %}(number){% else %}(int){% endif %}</span>.
 </p>
 
 
 <div class="for_info_only">
     <p>
-        <strong>举个栗子:</strong>
+        <strong>示例</strong>
     </p>
     <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 </div>
 
 <p class="for_info_only">
-    <strong>应该怎么做: </strong>
-    索引和切片是Python和其他语言编码的重要元素。 这将派上用场！
+   <strong>如何使用：</strong>
+    索引和分片是编码的重要元素。这在以后的
+    的道路上！
 </p>
 
 <p>
-    <strong>前提条件: </strong>
+   <strong>先决条件</strong>
     0 &le; len(array) &le; 20<br>
     all(isinstance(x, int) for x in array)<br>
     all(-100 &lt; x &lt; 100 for x in array)<br>
