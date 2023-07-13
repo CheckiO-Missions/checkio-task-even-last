@@ -1,0 +1,75 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        <p>
+            我不知道如何开始解决这项任务。
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            💡 好吧，首先，您需要移动列表并求和偶数索引的数字。然后将这个和与列表中的最后一个数字相乘，返回结果。不要忘记，如果列表为空 - 返回 0。
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            我应该用什么 Python 工具来实现这个想法？
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            首先，你需要<a target="_blank" href="https://docs.python.org/3/tutorial/controlflow.html#if-statements">if-else</a> 语句来返回数字或 0，这取决于 list 的空性。用<a target="_blank" href="https://docs.python.org/3/library/functions.html?highlight=len#len">len()</a> 检查 list 的空性 - 结果不等于 0。然后，用<a target="_blank" href="https://docs.python.org/3/library/functions.html?highlight=sum#sum">sum()</a> 乘以 list 中的最后一个值。它的索引为<b class="code">len(list)-1</b> 。在 sum() 中，使用<a target="_blank" href="https://www.w3schools.com/python/python_lists_comprehension.asp">list comprehensions</a> 创建新的列表：使用<a target="_blank" href="https://docs.python.org/3/library/functions.html#func-range">range()</a> 遍历给定的数组，步骤 2 只得到偶数索引，并用这些索引取列表中的值。
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            我大致明白，但需要看到解决方案！
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            就在这里：
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def checkio(array: list[int]) -> int:
+
+    if len(array)!= 0:
+        sumEven = sum([array[i] for i in range(0, len(array), 2)])
+        last = array[len(array) - 1]
+        return sumEven * last 
+    else:
+        return 0
+        </pre>
+        </div>
+        <p>
+            为了使代码更 "pythonic"（我建议你也去google一下这个词）和更短，使用<a target="_blank" href="https://docs.python.org/3/tutorial/errors.html#handling-exceptions">try-except</a> 来捕获IndexError，用slicing代替list comprehensions和list的负索引：
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def checkio(array: list[int]) -> int:
+            
+    try:
+        return array[-1] * sum(array[::2]) 
+    except IndexError:
+        return 0
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            谢谢！现在我知道并理解了更多！一切正常！
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            很高兴听到这个消息！
+        </p>
+    </div>
+</div>
+</body>
