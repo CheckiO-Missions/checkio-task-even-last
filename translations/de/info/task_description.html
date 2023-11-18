@@ -4,23 +4,22 @@
 
 
 <p>
-    Vorgegeben wird ein Array mit Integern. Du sollst die Summe der Elemente mit geraden Indizes (0te, 2te,4te...)
-    ermitteln und diese Summe mit dem letzten Element des Array multiplizieren.<br>
-    Vergiss nicht, dass das erste Element eines Arrays den Index 0 hat.
+    Sie erhalten {% if is_js %}Array{% else %}Liste{% endif %} <span>({% if is_js %}array{% else %}list{% endif %})</span> von ganzen Zahlen <span>{% if is_js %}(number){% else %}(int){% endif %}</span>. Sie sollten die Summe der Elemente mit geraden Indizes (0., 2., 4...) ermitteln. Dann multiplizieren Sie diese summierte Zahl und das letzte Element des {% if is_js %}array{% else %}list{% endif %} <span>({% if is_js %}array{% else %}list{% endif %})</span> miteinander. 
+     Vergessen Sie nicht, dass das erste Element einen Index von 0 hat.
 </p>
 
 <p>
-    Bei einem leeren Array, wird das Ergebnis immer 0 (Null).
+    Bei einem leeren {% if is_js %}array{% else %}list{% endif %} <span>({% if is_js %}array{% else %}list{% endif %})</span>wird das Ergebnis immer 0 (Null) sein.
 </p>
 <p style="text-align: center;">
     <img  title="example" src="{{MEDIA}}even-the-last.png" alt="example" style="max-height: 300px"/>
 </p>
 <p>
-    <strong>Eingabe: </strong> Eine Liste mit Integern.
+   <strong>Eingabe:</strong> {% if is_js %}Array{% else %}Liste{% endif %} <span>({% if is_js %}Array{% else %}List{% endif %})</span> von ganzen Zahlen <span>{% if is_js %}(number){% else %}(int){% endif %}</span>.
 </p>
 
 <p>
-    <strong>Ausgabe: </strong> Die Zahl als Integer.
+   <strong>Ausgabe:</strong> Eine ganze Zahl <span>{% if is_js %}(number){% else %}(int){% endif %}</span>.
 </p>
 
 
@@ -32,16 +31,14 @@
 </div>
 
 <p class="for_info_only">
-    <strong>Wozu das gut ist: </strong>
-    Indizes und Abschnitte sind wichtige Elemente beim programmieren in Python und anderen Programmiersprachen.
-    Diese Aufgabe wird sich später als nützlich erweisen.
+   <strong>Wie sie verwendet wird:</strong>
+    Indizes und Slices sind wichtige Elemente der Codierung. Dies wird sich später als nützlich erweisen
+    straße!
 </p>
 
 <p>
-    <strong>Voraussetzung: </strong>
+   <strong>Vorbedingungen:</strong>
     0 &le; len(array) &le; 20<br>
-    all(isinstance(x, int) for x in array)<br>
-    all(-100 &lt; x &lt; 100 for x in array)<br>
+    all(isinstance(x, int) für x in array)<br>
+    all(-100 &lt; x &lt; 100 für x in array)<br>
 </p>
-
-
