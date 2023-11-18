@@ -1,0 +1,75 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Ich habe keine Ahnung, wie ich mit der Lösung dieser Aufgabe beginnen soll.
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            💡 Nun, zunächst einmal müssen Sie die Liste durchgehen und die Zahlen mit geraden Indizes summieren. Dann multiplizieren Sie diese Summe mit der letzten Zahl in der Liste und geben das Ergebnis zurück. Vergessen Sie nicht: Wenn die Liste leer ist, geben Sie 0 zurück.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Welche Python-Instrumente sollte ich verwenden, um diese Idee in Code umzusetzen?
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Zunächst einmal benötigen Sie die Anweisung <a target="_blank" href="https://docs.python.org/3/tutorial/controlflow.html#if-statements">if-else</a>, die je nach Leere der Liste eine Zahl oder 0 zurückgibt. Prüfen Sie die Leere der Liste mit <a target="_blank" href="https://docs.python.org/3/library/functions.html?highlight=len#len">len()</a> - das Ergebnis ist ungleich 0. Dann multiplizieren Sie <a target="_blank" href="https://docs.python.org/3/library/functions.html?highlight=sum#sum">sum()</a> mit dem letzten Wert in der Liste. Er hat den Index <b class="code">len(list)-1</b>. Erstellen Sie innerhalb von sum() eine neue Liste mit <a target="_blank" href="https://www.w3schools.com/python/python_lists_comprehension.asp">list comprehensions</a>: iterieren Sie über das gegebene Array mit <a target="_blank" href="https://docs.python.org/3/library/functions.html#func-range">range()</a> mit Schritt 2, um nur gerade Indizes zu erhalten und nehmen Sie die Werte der Liste mit diesen Indizes.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Ich verstehe im Allgemeinen, aber ich muss die Lösung sehen!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            Hier ist sie:
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def checkio(array: list[int]) -> int:
+
+    if len(array)!= 0:
+        sumEven = sum([array[i] for i in range(0, len(array), 2)])
+        last = array[len(array) - 1]
+        return sumEven * last 
+    else:
+        return 0
+        </pre>
+        </div>
+        <p>
+            Um den Code 'pythonischer' (ich empfehle Ihnen, auch diesen Begriff zu googeln) und kürzer zu machen, verwenden Sie <a target="_blank" href="https://docs.python.org/3/tutorial/errors.html#handling-exceptions">try-except</a>, um IndexError abzufangen, Slicing anstelle von List Comprehensions und negative Indizes von Listen:
+        </p>
+        <div class="spoiler">
+        <pre class="brush: python">
+def checkio(array: list[int]) -> int:
+            
+    try:
+        return array[-1] * sum(array[::2]) 
+    except IndexError:
+        return 0
+        </pre>
+        </div>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        <p>
+            Vielen Dank! Jetzt weiß und verstehe ich mehr! Alles funktioniert einwandfrei!
+        </p>
+    </div>
+    <div class="answer">
+        <p>
+            👍 Freut mich zu hören!
+        </p>
+    </div>
+</div>
+</body>
